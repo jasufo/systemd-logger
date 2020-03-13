@@ -1,5 +1,14 @@
 {
+    "name": "jasufo/systemd-logger",
+    "description": "Log your php app to systemd journal, without changing your app",
+    "type": "library",
+    "license": "Jasufo",
     "require": {
         "psr/log": "^1.1"
-    }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
