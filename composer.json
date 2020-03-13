@@ -6,6 +6,17 @@
     "require": {
         "psr/log": "^1.1"
     },
+    "autoload": {
+        "exclude-from-classmap": ["/Tests/"],
+        "psr-4": {
+            "Jasufo\\SystemdLoggerBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jasufo\\SystemdLoggerBundle\\": ""
+        }
+    },
     "config": {
         "bin-dir": "bin"
     },
