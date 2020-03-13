@@ -50,7 +50,7 @@ class SystemdLoggerService implements LoggerInterface
     public function addDebug($message, array $context = array())
     {
         return $this->addRecord(static::DEBUG, $message, $context);
-    }config/bundles.php
+    }
 
     /**
      * Adds a log record at the INFO level.
