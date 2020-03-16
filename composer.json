@@ -1,18 +1,19 @@
 {
     "name": "jasufo/systemd-logger",
-    "description": "Log your php app to systemd journal, without changing your app",
+    "description": "",
     "type": "library",
-    "license": "Jasufo",
+    "license": "",
     "require": {
         "psr/log": "^1.1",
-        "php": ">=7.0",
-        "symfony/symfony": "3.4.*",
-        "symfony/framework-bundle": "^3.0 || ^4.0"
+        "php": ">=5.3.9"
     },
     "autoload": {
         "psr-4": {
-            "SystemdLoggerBundle\\": ""
+            "SystemdLogger\\": "src/"
         }
+    },
+    "provide": {
+        "psr/log-implementation": "~1.0"
     },
     "config": {
         "bin-dir": "bin"

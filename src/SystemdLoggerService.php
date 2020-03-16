@@ -1,15 +1,15 @@
 <?php
 
-namespace SystemdLoggerBundle\Service;
+namespace SystemdLoggerBundle\src;
 
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 
 /**
- * Class SystemdLoggerService
- * @package SystemdLoggerBundle\Service
+ * Class SystemdLogger
+ * @package SystemdLogger\src
  */
-class SystemdLoggerService implements LoggerInterface
+class SystemdLogger
 {
     const EMERGENCY = 0;
     const ALERT = 1;

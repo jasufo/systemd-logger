@@ -1,5 +1,0 @@
-services:
-  systemd.logger:
-    class: SystemdLoggerBundle\Service\SystemdLoggerService
-    public: true
-
