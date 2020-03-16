@@ -37,7 +37,7 @@ class SystemdLogHandler extends AbstractProcessingHandler
     private $pdo;
     private $statement;
 
-    public function __construct(PDO $pdo, $level = Logger::DEBUG, bool $bubble = true)
+    public function __construct($level = Logger::DEBUG, bool $bubble = true)
     {
         parent::__construct($level, $bubble);
     }
