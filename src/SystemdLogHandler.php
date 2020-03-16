@@ -1,13 +1,15 @@
 <?php
 
-namespace SystemdLogHandler\src;
+namespace SystemdLogHandler;
 
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
+use Monolog\Logger;
+use Monolog\Handler\AbstractProcessingHandler;
 
 /**
  * Class SystemdLogHandler
- * @package SystemdLogHandler\src
+ * @package SystemdLogHandler
  */
 class SystemdLogHandler extends AbstractProcessingHandler
 {
@@ -31,12 +33,19 @@ class SystemdLogHandler extends AbstractProcessingHandler
         self::EMERGENCY => 'EMERGENCY',
     );
 
-    /** @var string */
-    protected $appname;
+    private $initialized = false;
+    private $pdo;
+    private $statement;
 
-    protected function addRecord($severity, $message, array $context) {
-        print_r("$message");
+    public function __construct(PDO $pdo, $level = Logger::DEBUG, bool $bubble = true)
+    {
+        parent::__construct($level, $bubble);
+    }
+
+    protected function write(array $record): void
+    {
+        print_r($record);
         sd_journal_send('MESSAGE=' . sprintf($message, $context),'PRIORITY=' . $severity, 'SYSLOG_IDENTIFIER=Linker');
-        return true;
     }
 }
+
