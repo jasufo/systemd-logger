@@ -2,6 +2,7 @@
 
 namespace SystemdLogHandler;
 
+use phpDocumentor\Reflection\Types\Object_;
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use Monolog\Logger;
@@ -33,18 +34,28 @@ class SystemdLogHandler extends AbstractProcessingHandler
         self::EMERGENCY => 'EMERGENCY',
     );
 
-    private $initialized = false;
-    private $pdo;
-    private $statement;
-
-    public function __construct($level = Logger::DEBUG, bool $bubble = true)
+    public function __construct($level = self::DEBUG, bool $bubble = true)
     {
         parent::__construct($level, $bubble);
     }
 
     protected function write(array $record): void
     {
-        print_r($record);
+        $context = $record['context'];
+        $severity = array_search($record['level_name'], self::$levels);
+        $params = [
+            'MESSAGE='. $record['formatted'],
+            'PRIORITY=' . $severity,
+            'SYSLOG_IDENTIFIER=' . $record['channel']
+        ];
+
+        if (isset($context['exception']) && $context['exception'] instanceof \Exception) {
+            $e = $context['exception'];
+            $params[] = 'CODE_FILE=' . $e->getFile();
+            $params[] = 'CODE_LINE=' . $e->getLine();
+        }
+
+        call_user_func_array('sd_journal_send', $params);
     }
 }
 
