@@ -43,9 +43,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the DEBUG level.
      *
-     * @param  $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addDebug($message, array $context = array())
     {
@@ -55,9 +55,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the INFO level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addInfo($message, array $context = array())
     {
@@ -67,9 +67,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the NOTICE level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addNotice($message, array $context = array())
     {
@@ -79,9 +79,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the WARNING level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addWarning($message, array $context = array())
     {
@@ -91,9 +91,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the ERROR level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addError($message, array $context = array())
     {
@@ -103,9 +103,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the CRITICAL level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addCritical($message, array $context = array())
     {
@@ -115,9 +115,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the ALERT level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addAlert($message, array $context = array())
     {
@@ -127,9 +127,9 @@ class SystemdLoggerService implements LoggerInterface
     /**
      * Adds a log record at the EMERGENCY level.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function addEmergency($message, array $context = array())
     {
@@ -141,9 +141,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function debug($message, array $context = array())
     {
@@ -155,9 +155,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function info($message, array $context = array())
     {
@@ -169,9 +169,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function notice($message, array $context = array())
     {
@@ -183,9 +183,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function warn($message, array $context = array())
     {
@@ -197,9 +197,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function warning($message, array $context = array())
     {
@@ -211,9 +211,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function err($message, array $context = array())
     {
@@ -225,9 +225,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function error($message, array $context = array())
     {
@@ -239,9 +239,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function crit($message, array $context = array())
     {
@@ -253,9 +253,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function critical($message, array $context = array())
     {
@@ -267,9 +267,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function alert($message, array $context = array())
     {
@@ -281,9 +281,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function emerg($message, array $context = array())
     {
@@ -295,9 +295,9 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function emergency($message, array $context = array())
     {
@@ -309,10 +309,10 @@ class SystemdLoggerService implements LoggerInterface
      *
      * This method allows for compatibility with common interfaces.
      *
-     * @param  mixed   $level   The log level
-     * @param  string $message The log message
-     * @param  array  $context The log context
-     * @return bool   Whether the record has been processed
+     * @param  mixed $level   The log level
+     * @param  mixed $message The log message
+     * @param  array $context The log context
+     * @return bool  Whether the record has been processed
      */
     public function log($level, $message, array $context = array())
     {
