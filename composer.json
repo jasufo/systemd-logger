@@ -4,17 +4,14 @@
     "type": "library",
     "license": "Jasufo",
     "require": {
-        "psr/log": "^1.1"
+        "psr/log": "^1.1",
+        "php": ">=7.0",
+        "symfony/symfony": "3.4.*",
+        "symfony/framework-bundle": "^3.0 || ^4.0"
     },
     "autoload": {
-        "exclude-from-classmap": ["/Tests/"],
         "psr-4": {
-            "Jasufo\\SystemdLoggerBundle\\": ""
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Jasufo\\SystemdLoggerBundle\\": ""
+            "SystemdLoggerBundle\\": ""
         }
     },
     "config": {
