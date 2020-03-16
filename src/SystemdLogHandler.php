@@ -45,7 +45,6 @@ class SystemdLogHandler extends AbstractProcessingHandler
     protected function write(array $record): void
     {
         print_r($record);
-        sd_journal_send('MESSAGE=' . sprintf($message, $context),'PRIORITY=' . $severity, 'SYSLOG_IDENTIFIER=Linker');
     }
 }
 
