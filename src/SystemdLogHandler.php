@@ -34,6 +34,7 @@ class SystemdLogHandler extends AbstractProcessingHandler
         self::EMERGENCY => 'EMERGENCY',
     );
 
+
     public function __construct($level = self::DEBUG, bool $bubble = true)
     {
         parent::__construct($level, $bubble);

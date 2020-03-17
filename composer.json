@@ -1,8 +1,8 @@
 {
-    "name": "jasufo/systemd-logger",
-    "description": "",
+    "name": "linker/systemd-log-handler",
+    "description": "Monolog handler that using systemd journal",
     "type": "library",
-    "license": "",
+    "license": "Linker",
     "require": {
         "psr/log": "^1.1",
         "php": ">=5.3.9"
@@ -13,7 +13,7 @@
         }
     },
     "provide": {
-        "psr/log-implementation": "~1.0"
+        "psr/log-implementation": "^1.1"
     },
     "config": {
         "bin-dir": "bin"
