@@ -1,8 +1,8 @@
 {
-    "name": "linker/systemd-log-handler",
-    "description": "Monolog handler that using systemd journal",
+    "name": "linker/journal-monolog-handler",
+    "description": "Monolog handler for systemd-journal",
     "type": "library",
-    "license": "Linker",
+    "license": "MIT",
     "require": {
         "psr/log": "^1.1",
         "php": ">=5.3.9"
